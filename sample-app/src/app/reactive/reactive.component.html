@@ -1,0 +1,135 @@
+
+<h1 align="center">CUSTOMER REGISTER</h1>
+<form method="POST" [formGroup]="signUpForm"    (ngSubmit)="submitForm()">
+  
+
+  <div class="mb-3">
+    <label for="Name" class="form-label">Full Name</label>
+    <input type="name" class="form-control" formControlName="fname" >
+    <!-- touched - {{fname.touched}}
+    <br>
+    untouched - {{fname.untouched}}
+    <br>
+    dirty -  {{fname.dirty}}
+    <br>
+    pristine - {{fname.pristine}} -->
+ 
+    <div *ngIf="firstName?.touched">
+      <span *ngIf=" firstName?.errors?.['pattern']">Name cannot contain numbers</span>
+      <span *ngIf=" firstName?.errors?.['required']">Please enter name</span>
+      
+    </div> 
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input type="email" class="form-control"  aria-describedby="emailHelp" formControlName="email">
+ 
+      
+      <div *ngIf="emailId?.touched">
+       <span *ngIf=" emailId?.errors?.['pattern']">enter valid format</span>
+       <span *ngIf=" emailId?.errors?.['required']">Please enter email</span>
+      
+    </div>
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="mb-3">
+    <label for="phonenumber" class="form-label">Phone Number</label>
+    <input type="number" class="form-control"  aria-describedby="numberHelp" formControlName="phone">
+
+    <div *ngIf="phoneNumber?.touched">
+      <span *ngIf=" phoneNumber?.errors?.['pattern']">enter valid phonenumber</span>
+      <span *ngIf=" phoneNumber?.errors?.['required']">Please enter phonenumber</span>
+     
+   </div> 
+   
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="mb-3">
+    <label for="Gender" class="form-label">Gender</label>
+       <input type="radio"   value="male" formControlName="gender">Male
+      <input type="radio"   value="female" formControlName="gender">Female<br /><br />
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">username</label>
+    <input type="text" class="form-control" formControlName="username">
+
+
+    <!-- <div *ngIf="username.touched">
+      <span *ngIf=" username.errors?.['pattern']">enter valid username</span>
+      <span *ngIf=" username.errors?.['required']">Please enter username</span>
+     
+   </div> -->
+
+</div>
+
+
+
+
+
+
+
+  
+
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="password" class="form-control" formControlName="password">
+
+
+     <div *ngIf="psWrd?.touched">
+      <span *ngIf=" psWrd?.errors?.['minlength']">password should be min. 8 characters</span>
+      <span *ngIf=" psWrd?.errors?.['required']">Please enter password</span>
+     
+   </div>  
+
+
+
+
+  </div>
+
+ 
+
+ 
+  <button type="submit" class="btn btn-primary" id="button">SignUp</button>
+  
+</form>

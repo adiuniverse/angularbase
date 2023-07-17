@@ -1,0 +1,32 @@
+.para{
+    font-size: x-large;
+    color: red;
+}
+
+.para1 {
+    font-size: xx-large;
+    color: blueviolet;
+}
+
+.para2{
+    color: yellow;
+}
+
+
+.t1{
+    border:2px red solid;
+}
+
+
+#d1
+{
+    border: 5px black groove;
+    width: 500px;
+    height: 700px;
+}
+
+#d2
+{
+  border: 5px black groove;
+  height: 300px;
+}

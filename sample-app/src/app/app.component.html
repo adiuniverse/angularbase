@@ -1,0 +1,381 @@
+<!-- <div>
+  <app-navbar></app-navbar>
+</div> -->
+
+
+<!-- 
+<table>
+  <thead>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Phone</th>
+    <th>Address</th>
+  </thead>
+  <tbody>
+    <tr *ngFor = "let student of students">
+       <td>  {{ student.name }}  </td>
+       <td>  {{ student.age  }}   </td>
+       <td>  {{ student.phone  }} </td>
+       <td>  {{ student.address }}  </td>
+
+    </tr>
+  </tbody>
+</table> -->
+
+
+
+<!-- 
+<table *ngIf = "show_table">
+  <thead>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Phone</th>
+    <th>Address</th>
+  </thead>
+  <tbody>
+    <tr *ngFor = "let student of students">
+       <td>  {{ student.name }}  </td>
+       <td>  {{ student.age  }}   </td>
+       <td>  {{ student.phone  }} </td>
+       <td>  {{ student.address }}  </td>
+
+    </tr>
+  </tbody>
+</table> -->
+<!-- 
+<table>
+
+<tbody>
+<p *ngIf = 'show_table then template1;else template2'></p>
+<ng-template #template1>
+
+
+  <table>
+    <thead>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Phone</th>
+      <th>Address</th>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let student of students">
+         <td>  {{ student.name }}  </td>
+         <td>  {{ student.age  }}   </td>
+         <td>  {{ student.phone  }} </td>
+         <td>  {{ student.address }}  </td>
+  
+      </tr>
+    </tbody>
+  </table>
+
+
+
+</ng-template>
+<ng-template #template2>
+
+<p>no data found</p>
+
+</ng-template>
+
+
+
+
+<div [ngSwitch] = 'color'>
+
+ 
+
+ <p *ngSwitchCase = "'red '">The color changed into red</p>
+ <p *ngSwitchCase = "'blue'">The color changed into blue</p>
+ <p *ngSwitchCase = "'green'">The color changed into green</p>
+ <p *ngSwitchDefault>No color change</p>
+</div>
+
+
+
+<div [style] = "{'color' : color , 'width' : '150px' , 'background-color' : 'blue'}">
+  Attribute Directives
+
+</div>  -->
+
+<!-- <div [ngStyle] = "{'color' : show_fontcolor?'red':'blue'}">
+  Attribute Directives
+
+</div> -->
+<!-- <p [style.color] = "'green'" [class]="'para'">style binding</p>  -->
+
+<!-- 
+<p [style.color] = "'green'" [class.para]="show_class">style binding</p> 
+<p [class] = "show_class?'para':'para1'">Class Binding Example</p>
+<p [ngClass] = "'para1 para2'">Two classes Binded</p>
+
+
+
+
+<p>username : {{ username }} </p>
+
+  
+
+<button [disabled] = "disabled_btn">Submit</button>
+
+
+
+
+<table class="t1">
+  <tr>
+    <td [attr.colspan] = "2">attribute binding</td>
+    <td>attribute bind</td>
+  </tr>
+  <tr>
+    <td>hello</td>
+    <td>hai</td>
+  </tr>
+</table>
+
+
+<!-- 
+<input type= "text" #textbox>
+<input type="button" value="signup" (click)="submit(textbox.value)"> -->
+
+
+
+<!-- 
+<input [(ngModel)]="student_name"  type= "text" #textbox value="{{student_name}}"><br>
+<input type="button" value="signup" (click)="submit(textbox.value)">
+<p>student_name : {{student_name}} </p> --> --> -->
+
+<!-- 
+<div id="d1">
+<label>Fontsize</label>
+<select [(ngModel)]="font_size">
+  <option value="10px">10px</option>
+  <option value="20px">20px</option>
+  <option value="30px">30px</option>
+</select> <br><br>
+
+
+<label>Fontcolor</label>
+<select [(ngModel)]="font_color">
+  <option value="red">red</option>
+  <option value="blue">blue</option>
+  <option value="green">green</option>
+</select><br><br>
+
+
+<label>Fontfamily</label>
+<select [(ngModel)]="font_family">
+  <option value="Arial">Arial</option>
+  <option value="Cambria">Cambria</option>
+  <option value="Times New Roman">Times New Roman</option>
+</select> <br><br>
+
+<label>Background</label>
+<select [(ngModel)]="back_ground">
+  <option value="white">white</option>
+  <option value="black">black</option>
+  <option value="yellow">yellow</option>
+</select> <br><br>
+
+
+
+<div id="d2"[(ngStyle)]="{'font-size':font_size,font-font_family,font_color,background-color'}">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, voluptatem.
+</div>
+
+
+</div> -->
+
+
+
+
+
+
+
+
+<!-- 
+
+
+
+
+
+
+
+
+<a routerLink="home">home</a>
+<a routerLink="about">about</a>
+<a routerLink="contact">contact</a>
+
+<div>
+  <router-outlet></router-outlet>
+</div>
+
+
+<p>Current date = {{today | date }}</p>
+<p>current medium date = {{today  | date:'medium'}} </p>
+<p>current short time = {{today | date:'shortTime'}}</p>
+<p>current time in mm:ss = {{today | date:'mm:ss'}}</p>
+<p>your name in uppercase = {{name | uppercase}}</p>
+
+<p>currency amount = {{amount | currency:'INR'}}</p>
+<p>decimal amount = {{amount | number:'5.3'}}</p>
+<p>percent amount = {{amount | percent}}</p>
+<p>the top percent student are:{{student | sort:'ascending'}}</p>
+<!-- <p>number of special character = {{special | countspecialchar}}</p> -->
+
+
+
+ 
+
+ 
+    
+
+
+ 
+<!-- 
+
+
+
+
+<h1 align="center">CUSTOMER REGISTER</h1>
+<form method="POST" #form = "ngForm" (ngSubmit)="submitForm(form.value)">
+  
+
+  <div class="mb-3">
+    <label for="Name" class="form-label">Full Name</label>
+    <input type="name" class="form-control" id="nameInputName1" pattern="[A-Z a-z]{1,32}" required  name = "fname" ngModel #fname="ngModel" > -->
+    <!-- touched - {{fname.touched}}
+    <br>
+    untouched - {{fname.untouched}}
+    <br>
+    dirty -  {{fname.dirty}}
+    <br>
+    pristine - {{fname.pristine}} -->
+<!--  
+    <div *ngIf="fname.touched">
+      <span *ngIf=" fname.errors?.['pattern']">Name cannot contain numbers</span>
+      <span *ngIf=" fname.errors?.['required']">Please enter name</span>
+      
+    </div>
+</div> -->
+
+
+
+
+
+
+
+
+
+  <!-- <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="cust_email" aria-describedby="emailHelp"required name="email" ngModel  #email="ngModel" 
+    pattern="^[\w.%+-]+@[a-z0-9.-]+\.[a-z]{3,}$">
+ 
+      
+      <div *ngIf="email.touched">
+       <span *ngIf=" email.errors?.['pattern']">enter valid format</span>
+       <span *ngIf=" email.errors?.['required']">Please enter email</span>
+      
+    </div>
+
+
+  </div> -->
+
+
+
+
+
+
+
+
+
+
+<!-- 
+  <div class="mb-3">
+    <label for="phonenumber" class="form-label">Phone Number</label>
+    <input type="number" class="form-control" id="PhoneInputNumber1" aria-describedby="numberHelp" required name="phonenumber" ngModel #phonenumber="ngModel"
+    pattern="[- +()0-9]{10,12}">
+
+
+    <div *ngIf="phonenumber.touched">
+      <span *ngIf=" phonenumber.errors?.['pattern']">enter valid phonenumber</span>
+      <span *ngIf=" phonenumber.errors?.['required']">Please enter phonenumber</span>
+     
+   </div>
+   
+  </div> -->
+
+
+
+
+
+
+
+
+
+
+
+  <!-- <div class="mb-3">
+    <label for="Gender" class="form-label">Gender</label>
+       <input type="radio"  required name="gender" value="male" ngModel >Male
+      <input type="radio"  name="gender" value="female" ngModel>Female<br /><br />
+  </div> -->
+
+
+
+
+
+
+
+
+
+
+  <!-- <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">username</label>
+    <input type="text" class="form-control" id="exampleInputPassword1" required name="username" ngModel #username = "ngModel"
+    pattern="^[a-z0-9_-]{8,15}$">
+
+
+    <div *ngIf="username.touched">
+      <span *ngIf=" username.errors?.['pattern']">enter valid username</span>
+      <span *ngIf=" username.errors?.['required']">Please enter username</span>
+     
+   </div>
+
+</div> -->
+
+
+
+
+
+
+
+  
+<!-- 
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1"required name="password" ngModel #password="ngModel"
+    pattern="('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}')"> -->
+
+<!-- 
+    <div *ngIf="password.touched">
+      <span *ngIf=" password.errors?.['pattern']">enter valid password</span>
+      <span *ngIf=" password.errors?.['required']">Please enter password</span>
+     
+   </div>
+
+
+
+
+  </div>
+
+ 
+
+ 
+  <button type="submit" [disabled]="form.invalid" class="btn btn-primary" id="button">SignUp</button>
+  
+</form> -->
+
+
+<router-outlet></router-outlet>
+
+
